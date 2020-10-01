@@ -504,11 +504,6 @@ There is no context output for this command.
 #### Command Example
 ```!ms-ecm-script-approve comment="Some comment" script_guid=394EDB29-5D89-4B9B-9745-A1F6DC8214E2```
 
-#### Context Example
-```json
-{}
-```
-
 #### Human Readable Output
 
 >### Script was approved successfully
