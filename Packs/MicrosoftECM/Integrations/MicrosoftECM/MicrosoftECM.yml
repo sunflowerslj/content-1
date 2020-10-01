@@ -7,11 +7,11 @@ category: IT Services
 description: The configuration manager provides the overall Configuration Management
   (CM) infrastructure and environment to the product development team (formerly known as SCCM).
 configuration:
-- display: ECM Server URL (e.g. 192.168.64.128)
+- display: ECM Server URL (e.g., 192.168.64.128)
   name: ComputerName
   type: 0
   required: true
-- display: Username i.e DOMAIN\username
+- display: Username (i.e., DOMAIN\username)
   name: credentials
   type: 9
   required: true
@@ -80,11 +80,10 @@ script:
         collection_type="Device"`)
     outputs:
     - contextPath: MicrosoftECM.Collections.Name
-      description: The collection's name
+      description: The collection name
       type: string
     - contextPath: MicrosoftECM.Collections.ID
-      description: Unique auto-generated ID containing eight characters. The default
-        value is ""
+      description: Unique auto-generated ID containing eight characters.
       type: string
     - contextPath: MicrosoftECM.Collections.Type
       description: The type of the collection
@@ -352,7 +351,7 @@ script:
         (can be retrived via `!ms-ecm-collection-list collection_type="Device"`)
     outputs:
     - contextPath: MicrosoftECM.Collections.Name
-      description: The collection's name
+      description: The collection name
       type: string
     - contextPath: MicrosoftECM.Collections.ID
       description: Unique auto-generated ID containing eight characters.
@@ -426,11 +425,10 @@ script:
         via `!ms-ecm-device-list`)
     outputs:
     - contextPath: MicrosoftECM.Collections.Name
-      description: The collection's name
+      description: The collection name
       type: string
     - contextPath: MicrosoftECM.Collections.ID
-      description: Unique auto-generated ID containing eight characters. The default
-        value is ""
+      description: Unique auto-generated ID containing eight characters.
       type: string
     - contextPath: MicrosoftECM.Collections.Type
       description: The type of the collection
@@ -501,11 +499,10 @@ script:
         rule (can be retrived via `!ms-ecm-collection-list collection_type="Device"`)
     outputs:
     - contextPath: MicrosoftECM.Collections.Name
-      description: The collection's name
+      description: The collection name
       type: string
     - contextPath: MicrosoftECM.Collections.ID
-      description: Unique auto-generated ID containing eight characters. The default
-        value is ""
+      description: Unique auto-generated ID containing eight characters.
       type: string
     - contextPath: MicrosoftECM.Collections.Type
       description: The type of the collection
@@ -577,11 +574,10 @@ script:
         rule (can be retrived via `!ms-ecm-collection-list collection_type="Device"`)
     outputs:
     - contextPath: MicrosoftECM.Collections.Name
-      description: The collection's name
+      description: The collection name
       type: string
     - contextPath: MicrosoftECM.Collections.ID
-      description: Unique auto-generated ID containing eight characters. The default
-        value is ""
+      description: Unique auto-generated ID containing eight characters.
       type: string
     - contextPath: MicrosoftECM.Collections.Type
       description: The type of the collection
@@ -657,11 +653,10 @@ script:
       description: Specifies the name for the rule
     outputs:
     - contextPath: MicrosoftECM.Collections.Name
-      description: The collection's name
+      description: The collection name
       type: string
     - contextPath: MicrosoftECM.Collections.ID
-      description: Unique auto-generated ID containing eight characters. The default
-        value is ""
+      description: Unique auto-generated ID containing eight characters.
       type: string
     - contextPath: MicrosoftECM.Collections.Type
       description: The type of the collection

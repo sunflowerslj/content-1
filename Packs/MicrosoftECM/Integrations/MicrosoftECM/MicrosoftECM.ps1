@@ -1075,7 +1075,6 @@ function Main
 	[Diagnostics.CodeAnalysis.SuppressMessageAttribute("PSAvoidUsingConvertToSecureStringWithPlainText", "")]
 	[Diagnostics.CodeAnalysis.SuppressMessageAttribute("PSUseDeclaredVarsMoreThanAssignments", "")]
 	param()
-	#	[System.Diagnostics.CodeAnalysis.SuppressMessageAttribute('PSAvoidUsingConvertToSecureStringWithPlainText', '')]
 	# Parse Params
 	$computerName = $demisto.Params()['ComputerName']
 	$userName = $demisto.Params()['credentials']['identifier']

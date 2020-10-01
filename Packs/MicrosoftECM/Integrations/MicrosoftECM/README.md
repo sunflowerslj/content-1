@@ -18,8 +18,8 @@ If you configured the server to run Docker images with a non-root internal user 
 
 | **Parameter** | **Description** | **Required** |
 | --- | --- | --- |
-| ComputerName | ECM Server URL \(e.g. 192.168.64.128\) | True |
-| credentials | Username i.e DOMAIN\\username | True |
+| ComputerName | ECM Server URL \(e.g., 192.168.64.128\) | True |
+| credentials | Username \(i.e, DOMAIN\\username\)  | True |
 | SiteCode | ECM Site Code | True |
 
 4. Click **Test** to validate the ComputerName, credentials, and connection.
