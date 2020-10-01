@@ -5,7 +5,7 @@ name: Microsoft Endpoint Configuration Manager
 display: Microsoft Endpoint Configuration Manager
 category: IT Services
 description: The configuration manager provides the overall Configuration Management
-  (CM) infrastructure and environment to the product development team
+  (CM) infrastructure and environment to the product development team (formerly known as SCCM).
 configuration:
 - display: ECM Server URL (e.g. 192.168.64.128)
   name: ComputerName

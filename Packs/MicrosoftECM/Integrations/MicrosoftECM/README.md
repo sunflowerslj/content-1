@@ -1,6 +1,7 @@
 ## Overview
 
-The configuration manager provides the overall Configuration Management (CM) infrastructure and environment to the product development team
+The configuration manager provides the overall Configuration Management (CM) infrastructure and environment to the product development team  (formerly known an SCCM).
+
 This integration was integrated and tested with version 1906 of Microsoft Endpoint Configuration Manager
 ## Prerequisites
 - This integration requires root access in order to execute commands. 

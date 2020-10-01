@@ -264,10 +264,10 @@ Function ParseCollectionObject($Collections)
 				[PSCustomObject]@{
 					Name = $_.Name
 					ID = $_.CollectionID
-					Type = $COLLECTION_TYPE_MAPPING.Get_Item($_.CollectionType)
+					Type = $COLLECTION_TYPE_MAPPING.Get_Item("$($_.CollectionType)")
 					Comment = $_.Comment
-					CurrentStatus = $COLLECTION_CURRENT_STATUS_MAPPING.Get_Item($_.CurrentStatus)
-					CollectionRules = ($collection.CollectionRules -Join ",")
+					CurrentStatus = $COLLECTION_CURRENT_STATUS_MAPPING.Get_Item("$($_.CurrentStatus)")
+					CollectionRules = ($_.CollectionRules -Join ",")
 					HasProvisionedMember = "$( $_.HasProvisionedMember )"
 					IncludeExcludeCollectionsCount = "$( $_.IncludeExcludeCollectionsCount )"
 					IsBuiltIn = "$( $_.IsBuiltIn )"
@@ -285,7 +285,7 @@ Function ParseCollectionObject($Collections)
 			}
 		}
 		$MDOutput = $output."MicrosoftECM.Collections(val.ID && val.ID === obj.ID)" | TableToMarkdown -Name "Collection List"
-		$output."MicrosoftECM.Collections(val.ID && val.ID === obj.ID)" | ForEach-Object { $_.CollectionRules = $_.CollectionRules.Split("`n'") }
+		$output."MicrosoftECM.Collections(val.ID && val.ID === obj.ID)" | ForEach-Object { $_.CollectionRules = $_.CollectionRules.Split("`n,") }
 		ReturnOutputs -ReadableOutput $MDOutput -Outputs $output -RawResponse $_ | Out-Null
 	}
 	else
@@ -346,7 +346,7 @@ Function ParseScriptObject($script)
 		$output = [PSCustomObject]@{
 			"MicrosoftECM.Scripts(val.ScriptGuid && val.ScriptGuid === obj.ScriptGuid)" = $script | ForEach-Object {
 				[PSCustomObject]@{
-					ApprovalState = $SCRIPT_APPROVAL_STATE.Get_Item($_.ApprovalState)
+					ApprovalState = $SCRIPT_APPROVAL_STATE.Get_Item("$($_.ApprovalState)")
 					Approver = $_.Approver
 					Author = $_.Author
 					Comment = $_.Comment
@@ -813,7 +813,7 @@ Function InvocationResults()
 					DeviceName = $_.DeviceName
 					ResourceId = $_.ResourceId
 					LastUpdateTime = ParseDateTimeObjectToIso $_.LastUpdateTime
-					ScriptExecutionState = $SCRIPT_EXECUTION_STATUS.Get_Item($_.ScriptExecutionState)
+					ScriptExecutionState = $SCRIPT_EXECUTION_STATUS.Get_Item("$($_.ScriptExecutionState)")
 					ScriptExitCode = "$( $_.ScriptExitCode )"
 					ScriptGuid = $_.ScriptGuid
 					ScriptLastModifiedDate = ParseDateTimeObjectToIso $_.ScriptLastModifiedDate
